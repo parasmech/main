@@ -138,6 +138,117 @@
         </p>
     </section>
 
+        <!-- Updated Section for Project 5 -->
+    <section>
+        <h2>Project 5: Dialog Summarization using Generative AI on AWS SageMaker</h2>
+        <p>This project focuses on summarizing dialogues using a Generative AI model deployed on AWS SageMaker. It demonstrates the exploration of how different inputs and prompt engineering techniques affect the model’s summarization capabilities. The project is structured around multiple steps to improve the summarization through zero-shot, one-shot, and few-shot inference techniques, using generative models like FLAN-T5.</p>
+
+        <h3>Project Workflow</h3>
+        <ol>
+            <li><strong>Set up Kernel and Required Dependencies:</strong> The environment was set up on AWS SageMaker, and dependencies were installed for model inference and testing.</li>
+            <li><strong>Summarize Dialogue without Prompt Engineering:</strong> The model generates basic summaries without specific instructions, demonstrating the default capabilities of the LLM in summarizing conversations.</li>
+            <li><strong>Summarize Dialogue with an Instruction Prompt:</strong> This step adds an instruction prompt to guide the model towards producing more relevant summaries. 
+                <ul>
+                    <li><strong>Zero Shot Inference with an Instruction Prompt:</strong> No examples are provided, and the model directly uses the prompt to generate a summary.</li>
+                    <li><strong>Zero Shot Inference with the Prompt Template from FLAN-T5:</strong> A specialized prompt template designed for dialogue summarization, leveraging the capabilities of FLAN-T5.</li>
+                </ul>
+            </li>
+            <li><strong>Summarize Dialogue with One Shot and Few Shot Inference:</strong> In this phase, example dialogues are provided to fine-tune the model's output further.
+                <ul>
+                    <li><strong>One Shot Inference:</strong> A single example is given to the model before performing inference, leading to improved contextual summarization.</li>
+                    <li><strong>Few Shot Inference:</strong> Several examples are provided, further enhancing the model's ability to generate accurate dialogue summaries.</li>
+                </ul>
+            </li>
+            <li><strong>Generative Configuration Parameters for Inference:</strong> Various configuration parameters like temperature, maximum tokens, and top-p were experimented with to fine-tune the output and improve model behavior during inference.</li>
+        </ol>
+
+        <h3>Features</h3>
+        <ul>
+            <li>Dialog summarization using generative AI deployed on AWS SageMaker</li>
+            <li>Experimentation with zero-shot, one-shot, and few-shot inferences</li>
+            <li>Prompt engineering to improve summarization accuracy</li>
+            <li>Configuration of generative parameters to refine model output</li>
+        </ul>
+
+        <h3>Technologies Used</h3>
+        <ul>
+            <li>AWS SageMaker</li>
+            <li>Generative AI models (FLAN-T5)</li>
+            <li>Python</li>
+        </ul>
+
+        <h3>Links</h3>
+        <p>
+            <a href="https://github.com/parasmech/GenAI_with_LLM_AWS_SageMaker/blob/main/Summarize_Dialogue.ipynb"</a>
+            <br>
+          
+        </p>
+    </section>
+
+        <!-- New Section for Project 6 -->
+    <section>
+        <h2>Project 6: Fine-Tuning a Generative AI Model for Dialogue Summarization with PEFT</h2>
+        <p>This project involves fine-tuning an existing large language model (LLM) from Hugging Face for enhanced dialogue summarization. Using the FLAN-T5 model, which provides a high-quality instruction-tuned framework, this project focuses on improving dialogue summarization performance through both full fine-tuning and Parameter Efficient Fine-Tuning (PEFT). The project aims to enhance the model’s ability to summarize conversations while evaluating the trade-offs between fine-tuning strategies using the ROUGE metric.</p>
+
+        <h3>Project Workflow</h3>
+        <ol>
+            <li><strong>Set up Kernel, Load Required Dependencies, Dataset, and LLM:</strong> The environment is set up with necessary dependencies, and the FLAN-T5 model is loaded. Initial model tests are performed using zero-shot inferencing.</li>
+            <li><strong>Perform Full Fine-Tuning:</strong> The dialogue-summary dataset is preprocessed, and the model is fully fine-tuned on this dataset. Model evaluations are conducted both qualitatively (through human evaluation) and quantitatively using the ROUGE metric.</li>
+            <li><strong>Perform Parameter Efficient Fine-Tuning (PEFT):</strong> In this step, PEFT methods such as LoRA are employed for fine-tuning, optimizing the model's performance with minimal trainable parameters. This technique is evaluated for both quality and performance using the ROUGE metric to compare its effectiveness with the full fine-tuning approach.</li>
+        </ol>
+
+        <h3>Features</h3>
+        <ul>
+            <li>Full fine-tuning of the FLAN-T5 model for enhanced dialogue summarization</li>
+            <li>Utilizes Parameter Efficient Fine-Tuning (PEFT) techniques to minimize resource usage</li>
+            <li>Evaluation of the model using human assessments and ROUGE metrics</li>
+        </ul>
+
+        <h3>Technologies Used</h3>
+        <ul>
+            <li>Hugging Face LLM (FLAN-T5)</li>
+            <li>Parameter Efficient Fine-Tuning (PEFT/LoRA)</li>
+            <li>AWS SageMaker</li>
+            <li>Python</li>
+            <li>ROUGE Metrics</li>
+        </ul>
+
+        <h3>Links</h3>
+        <p>
+            <a href="https://github.com/parasmech/GenAI_with_LLM_AWS_SageMaker/blob/main/Fine_tune_Generative_AI_model_PEFT.ipynb">GitHub Repository for Fine-Tuning Generative AI Model</a>
+            <br>
+        </p>
+    </section>
+
+    <section>
+    <h2>Project 7: Fine-Tune FLAN-T5 with Reinforcement Learning (PPO) and PEFT to Generate Less-Toxic Summaries</h2>
+    <p>This project explores how to fine-tune a FLAN-T5 model using Proximal Policy Optimization (PPO) and Parameter-Efficient Fine-Tuning (PEFT) techniques to generate less toxic content. Leveraging Meta AI's hate speech reward model, the fine-tuning process adjusts the model’s output to minimize harmful or toxic content. The reward model is a binary classifier that categorizes the generated content as either "hate" or "not hate," and the goal is to reduce the toxicity of the generated summaries.</p>
+    
+    <h3>Features</h3>
+    <ul>
+        <li>Fine-tuning of a pre-trained FLAN-T5 model using reinforcement learning</li>
+        <li>Use of Meta AI's hate speech reward model to guide the detoxification process</li>
+        <li>Evaluates model performance using both qualitative and quantitative methods</li>
+        <li>Application of Proximal Policy Optimization (PPO) for efficient fine-tuning</li>
+        <li>Includes Parameter-Efficient Fine-Tuning (PEFT) for less resource-intensive training</li>
+    </ul>
+
+    <h3>Technologies Used</h3>
+    <ul>
+        <li>AWS SageMaker for model training</li>
+        <li>FLAN-T5 model</li>
+        <li>Proximal Policy Optimization (PPO)</li>
+        <li>Meta AI's Hate Speech Reward Model</li>
+        <li>PEFT techniques</li>
+    </ul>
+
+    <h3>Links</h3>
+    <p>
+        <a href="https://github.com/parasmech/GenAI_with_LLM_AWS_SageMaker/blob/main/Fine_tune_model_to_detoxify_summaries_RLHF.ipynb">GitHub Repository for Fine-Tuning Project</a>
+    </p>
+</section>
+
+    
 </body>
 </html>
 
