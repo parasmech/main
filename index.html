@@ -10,15 +10,24 @@
 
     <section>
         <h2> Project 1: Neural Network for Vehicle Dynamics Modeling</h2>
-        <p>This project is focused on developing a neural network model to accurately predict the dynamics of a vehicle based on various sensor inputs. By utilizing deep learning techniques, this model aims to improve the understanding of how vehicles behave under different conditions, contributing to advancements in autonomous driving, vehicle control, and optimization systems.</p>
+        <p>This project is focused on developing a neural network model to accurately predict the vehicle dynamic states using End-to-End (FF & GRU) approach & Physics informed approach</p>
 
         <h2>Features</h2>
         <ul>
-            <li>Utilizes real-world vehicle dynamics data.</li>
+            <li>Comparison of two machine learning approaches for vehicle dynamic state prediction, each
+                implemented using two types of Neural networks, thus providing clarity not only on the
+                most optimal approach but also on the type of network best suited for the task.
+                
+                End- End Deep Neural Network that predict subsequent vehicle states using the state and the control
+                input from the current and past time steps.
+                
+                Physics informed neural network approach where the Deep Neural Network is only used to predict
+                the parameters of a chosen physical vehicle dynamic model, subsequently using the estimated
+                parameters into the chosen model to predict the states.
+                
+            .</li>
             <li>Trained using Python and Keras with TensorFlow backend.</li>
-            <li>Evaluates vehicle stability, handling, and control behavior.</li>
-            <li>Includes performance metrics and visualizations.</li>
-            <li>Implemented optimization techniques for better model accuracy.</li>
+            <li>Mean Square error (MSE) is used as a metric for comparison.</li>
         </ul>
 
         <h2>Technologies Used</h2>
@@ -29,15 +38,13 @@
             <li>Matplotlib & Seaborn</li>
             <li>GitHub Actions</li>
         </ul>
-
-        <h2>Project Status</h2>
-        <p>The model has been trained on vehicle sensor data and is being fine-tuned to ensure high accuracy in predicting vehicle behavior in different scenarios. Future improvements include enhancing the model with more data and incorporating additional vehicle states for better control predictions.</p>
+        </p>
 
         <h2>Links</h2>
         <p>
-            <a href="https://github.com/TUMFTM/NeuralNetwork_for_VehicleDynamicsModeling">GitHub Repository</a>
+            <a href="https://github.com/parasmech/NeuralNetwork_for_VehicleDynamicsModeling">GitHub Repository</a>
             <br>
-            <a href="#">Live Demo (optional)</a>
+           
         </p>
     </section>
 
